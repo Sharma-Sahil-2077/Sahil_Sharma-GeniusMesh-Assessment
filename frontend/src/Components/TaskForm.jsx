@@ -23,6 +23,7 @@ export default function TaskForm({ onCreate,setAdd }) {
   };
 
   return (
+    <div className="absolute h-full w-full z-20 backdrop-blur-lg">
     <div className="h-[80%] w-[100%] border-slate-200 flex  items-center justify-center ">
       <div className="flex-col  ">
       <div className="justify-end h-10 flex ">
@@ -66,6 +67,6 @@ export default function TaskForm({ onCreate,setAdd }) {
         </button>
       </form>
 </div>
-    </div>
+    </div></div>
   );
 }
