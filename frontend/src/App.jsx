@@ -42,13 +42,20 @@ function App() {
 
   return (
 
-    <div className="flex-col h-screen w-screen justify-center bg-fuchsia-100 p-4">
-<div className="flex w-full">
-      <h1 className="text-2xl flex font-light text-slate-800 mb-4">Task Manager</h1>
-</div>
+   
+   <div className="flex-col h-screen w-screen  bg-fuchsia-100 p-4">
 
+
+     {/* Form */}
+{add === 1 &&<div className="absolute h-full  z-20 w-full backdrop-blur-xl">
+     <TaskForm className="w-full h-full border-slate-400" onCreate={handleCreate} setAdd={setAdd} />
+</div>}
 
        <div className="mt-6 flex-col w-[90%] mx-20 ">
+        <div className="flex w-full">
+
+      <h1 className="text-[50px] flex font-light text-slate-800 mb-4">Task Manager</h1>
+</div>
         <div className="flex w-full justify-between m-2">
         <h2 className="text-3xl  font-medium text-slate-800 mb-2">Tasks</h2>
 <button onClick={()=>setAdd(1)} className="bg-blue-400 text-white hover:cursor-pointer mx-2 p-2 rounded-md">+ Add New Task</button>
